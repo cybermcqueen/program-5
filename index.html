@@ -42,24 +42,14 @@
    </table>
 </script>
 
-<script>
-   async function getData(selected_major) {
-   var response = await fetch('cit5students.json');
-
-
-   if(response.ok) {
-      var data = await response.json();
-
-
-  cit5students = data.filter( (students) => students.major == selected_major ); 
-
-   var templateText = document.getElementById('majorTemplate').innerHTML;
-   var compiledTemplateText = Handlebars.compile(templateText);
-   compiledHtml = compiledTemplateText({ rows: cit5students}) 
-   document.getElementById('majorTable').innerHTML = compiledHtml;
+  <script>
+ selected_major = [] // new array to hold filtered data
+for(i=0, i < data.length; i++) {
+  
+ if(data[i].meal == selected_major) {
+ selected_major.push(data[i].major);
  }
-   else {
-      document.querySelector('#majorTable').innerHTML = "There was an error, or menu items not found";
+}
    }
 }
 </script>
