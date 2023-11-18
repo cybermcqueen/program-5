@@ -19,7 +19,7 @@
       
          <div style='padding: 5px;'>    
             <button type='button' class="btn btn-primary" onClick="getData('CIT')">CIT Majors</button> 
-            <button type='button' class="btn btn-primary" onClick="getData('business')">Business Majors</button>  
+            <button type='button' class="btn btn-primary" onClick="getData('BUS')">Business Majors</button>  
          </div>
       
   
@@ -51,11 +51,11 @@
       var data = await response.json();
 
 
-   types_major = data.filter( (major) => major.types == selected_major ); 
+  major_types = data.filter( (major) => types.major == selected_major ); 
 
    var templateText = document.getElementById('majorTemplate').innerHTML;
    var compiledTemplateText = Handlebars.compile(templateText);
-   compiledHtml = compiledTemplateText({ rows: types_major }) 
+   compiledHtml = compiledTemplateText({ rows: majoe_types }) 
    document.getElementById('majorTable').innerHTML = compiledHtml;
  }
    else {
