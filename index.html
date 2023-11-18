@@ -55,7 +55,7 @@
 
    var templateText = document.getElementById('majorTemplate').innerHTML;
    var compiledTemplateText = Handlebars.compile(templateText);
-   compiledHtml = compiledTemplateText({ rows: majoe_types }) 
+   compiledHtml = compiledTemplateText({ rows: major_types }) 
    document.getElementById('majorTable').innerHTML = compiledHtml;
  }
    else {
