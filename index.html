@@ -55,7 +55,7 @@
 
    var templateText = document.getElementById('majorTemplate').innerHTML;
    var compiledTemplateText = Handlebars.compile(templateText);
-   compiledHtml = compiledTemplateText({ rows: major.students}) 
+   compiledHtml = compiledTemplateText({ rows: cit5students}) 
    document.getElementById('majorTable').innerHTML = compiledHtml;
  }
    else {
