@@ -48,7 +48,7 @@
 
 
    if(response.ok) {
-      var data = response.json();
+      var data = await response.json();
 
 
   major = data.filter( (student) => student.major == selected_major ); 
