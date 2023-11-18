@@ -51,7 +51,7 @@
       var data = await response.json();
 
 
-  cit5students = data.filter( (students) => major.students == selected_major ); 
+  cit5students = data.filter( (students) => students.major == selected_major ); 
 
    var templateText = document.getElementById('majorTemplate').innerHTML;
    var compiledTemplateText = Handlebars.compile(templateText);
