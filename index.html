@@ -51,11 +51,11 @@
       var data = await response.json();
 
 
-  students_major = data.filter( (students) => students.major == selected_major ); 
+  cit5students = data.filter( (students) => major.students == selected_major ); 
 
    var templateText = document.getElementById('majorTemplate').innerHTML;
    var compiledTemplateText = Handlebars.compile(templateText);
-   compiledHtml = compiledTemplateText({ rows: students.major }) 
+   compiledHtml = compiledTemplateText({ rows: cit5students}) 
    document.getElementById('majorTable').innerHTML = compiledHtml;
  }
    else {
